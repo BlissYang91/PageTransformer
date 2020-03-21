@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         tab_layout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 tab?.position?.let { view_pager.setCurrentItem(it,true) }
+                tab_layout.post { tab_layout.smoothScrollTo(200, 0) }
                 Toast.makeText(this@MainActivity,"点击了${tab?.position}",Toast.LENGTH_SHORT).show()
             }
             override fun onTabReselected(tab: TabLayout.Tab?) {
