@@ -1,0 +1,2 @@
+rootProject.name='PageTransformer'
+include ':app'

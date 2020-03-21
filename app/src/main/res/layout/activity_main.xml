@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+        <variable
+            name="data"
+            type="com.example.pagetransformer.bean.MyData" />
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clipChildren="true"
+        tools:context=".MainActivity">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginLeft="40dp"
+            android:visibility="gone"
+            android:clipChildren="true">
+             <TextView
+                 android:id="@+id/tv_name1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:gravity="center"
+                 android:textSize="20sp"
+                 android:textColor="@android:color/black"
+                 android:text="VV7"></TextView>
+
+            <TextView
+                android:id="@+id/tv_des1"
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@android:color/black"
+                android:text="智在向前\n担当wey来"></TextView>
+            <TextView
+                android:id="@+id/tv_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_marginLeft="70dp"
+                android:textColor="@android:color/darker_gray"
+                android:text="VV6"></TextView>
+            <TextView
+                android:id="@+id/tv_des2"
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_marginLeft="50dp"
+                android:textColor="@android:color/black"
+                android:text="VV7"></TextView>
+
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="680dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="16dp"
+            app:tabIndicatorHeight="0dp"
+            android:clipChildren="true"
+            android:paddingLeft="20dp"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorGravity="center"
+            app:tabMaxWidth="0dp"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            app:tabRippleColor="@android:color/transparent">
+
+        </com.google.android.material.tabs.TabLayout>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+        </androidx.viewpager.widget.ViewPager>
+
+    </LinearLayout>
+</layout>
